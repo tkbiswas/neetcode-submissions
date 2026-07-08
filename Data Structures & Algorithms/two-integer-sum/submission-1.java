@@ -1,0 +1,27 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        var result = new int[2];
+        // int i=0;
+        // int j = nums.length-1;
+        // while(j > i){
+        //     if(nums[i] + nums[j] == target){
+        //             result[0] = i;
+        //             result[1] = j;
+        //             break;
+        //         }else{
+        //             i = i+1;
+        //             j = j -1;
+        //         }
+        // }
+        for(int i=0; i<nums.length -1; i++){
+            for(int j=i+1; j<nums.length; j++){
+                if(nums[i] + nums[j] == target){
+                    result[0] = i;
+                    result[1] = j;
+                    break;
+                }else continue;
+            }
+        }
+         return result;
+    }
+}
